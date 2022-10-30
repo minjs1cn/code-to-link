@@ -1,0 +1,85 @@
+<form catchsubmit="formSubmit">
+  <van-cell-group title="基本信息">
+    <van-field
+      name="name"
+      label="商家名称"
+      value="{{ info.name }}"
+    />
+    <van-field
+      name="tel"
+      label="联系方式"
+      value="{{ info.tel }}"
+      placeholder=""
+    />
+    <van-field
+      name="address"
+      label="联系地址"
+      value="{{ info.address }}"
+      placeholder=""
+    />
+  </van-cell-group>
+  <view class="btn">
+    <van-button type="primary" block formType="submit">更新</van-button>
+  </view>
+</form>
+<form catchsubmit="formSubmitAd">
+  <van-cell-group title="广告设置">
+    <van-field
+      title-width="10em"
+      name="ad_jili_id"
+      label="激励视频广告位ID"
+      value="{{ info.ad_jili_id }}"
+      placeholder=""
+    />
+    <van-field
+      title-width="10em"
+      name="ad_banner_id"
+      label="Banner广告位ID"
+      value="{{ info.ad_banner_id }}"
+      placeholder=""
+    />
+  </van-cell-group>
+  <view class="btn">
+    <van-button type="primary" block formType="submit">更新</van-button>
+  </view>
+</form>
+<form catchsubmit="formSubmitWifi" wx:if="{{info.wifis.length}}">
+  <van-cell-group wx:for="{{info.wifis}}" wx:key="_id" title="WIFI设置">
+    <van-field
+      name="{{'wifis.' + index + '._id'}}"
+      value="{{ item._id }}"
+      label="ID"
+      readonly
+    />
+    <van-field
+      name="{{'wifis.' + index + '.name'}}"
+      value="{{ item.name }}"
+      label="WIFI"
+    />
+    <van-field
+      name="{{'wifis.' + index + '.password'}}"
+      value="{{ item.password }}"
+      label="密码"
+    >
+    </van-field>
+  </van-cell-group>
+  <view class="btn">
+    <van-button type="primary" block formType="submit">更新</van-button>
+  </view>
+</form>
+<van-cell-group>
+  <van-field
+    model:value="{{ sid }}"
+    label="WIFI"
+  />
+  <van-field
+    model:value="{{ password }}"
+    label="密码"
+    use-button-slot
+  >
+    <van-button slot="button" size="small" type="primary" bindtap="addWifi">
+      添加
+    </van-button>
+  </van-field>
+</van-cell-group>
+

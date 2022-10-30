@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e test-3139ac --n quickstartFunctions --r --project "/Users/bytedance/WeChatProjects/code-to-link" --report_first --report

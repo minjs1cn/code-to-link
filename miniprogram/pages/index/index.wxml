@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="shop-name">店名: {{name}}</view>
+  <view class="list">
+    <van-cell-group title="本店WIFI">
+      <view class="item" wx:for="{{list}}" wx:key="_id">
+        <view class="item-name">wifi: {{item.name}}</view>
+        <view class="item-btn">
+          <van-button bindtap="linkWifi" data-id="{{item._id}}" type="info" size="mini" plain hairline block>连接</van-button>
+        </view>
+      </view>
+    </van-cell-group>
+  </view>
+</view>
+<view wx:if="{{ad_banner_id}}">
+  <ad unit-id="{{ad_banner_id}}"></ad>
+</view>

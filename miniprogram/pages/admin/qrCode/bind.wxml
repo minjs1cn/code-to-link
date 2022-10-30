@@ -1,0 +1,1 @@
+<van-picker show-toolbar bind:confirm="bindWifi" cancel-button-text="" confirm-button-text="绑定" columns="{{ columns }}" title="选择要绑定的店铺WIFI" value-key="name" bind:change="onChange" loading="{{loading}}" />

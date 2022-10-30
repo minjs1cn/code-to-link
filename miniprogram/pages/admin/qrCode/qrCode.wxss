@@ -1,0 +1,18 @@
+.item {
+  display: flex;
+  padding: 8px 16px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.item-name {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.item-btn {
+  display: flex;
+  width: 250rpx;
+  justify-content: space-around;
+}

@@ -1,0 +1,23 @@
+<van-cell-group>
+  <van-field
+    model:value="{{ qrCodeName }}"
+    placeholder="请输入二维码名称"
+    border="{{false}}"
+    clearable
+    center
+    use-button-slot
+  >
+  <van-button slot="button" bindtap="createQrCode" type="primary" size="small" plain hairline block>创建</van-button>
+  </van-field>
+</van-cell-group>
+<scroll-view scroll-y="true" style="width: 100%;height:{{scrollHeight}}px;" refresher-enabled="{{true}}" refresher-triggered="{{triggered}}"bindscrolltolower="bindscrolltolower" bindrefresherrefresh="bindrefresherrefresh">
+  <view class="item" wx:for="{{list}}" wx:key="_id">
+    <view class="item-name">{{item.name}}</view>
+    <view class="item-btn">
+      <van-button bindtap="saveQrCode" data-id="{{item._id}}" data-fileid="{{item.uri}}" type="warning" size="mini" plain hairline block>下载</van-button>
+      <van-button bindtap="bindQrCode" data-id="{{item._id}}" type="{{item.visible ? 'primary' : 'info'}}" size="mini" plain hairline block>{{ item.visible ? '绑定' : '更新' }}</van-button>
+    </view>
+  </view>
+</scroll-view>
+
+<admin-tabbar active="{{0}}" />

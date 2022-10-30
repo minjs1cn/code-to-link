@@ -1,0 +1,20 @@
+<van-cell-group>
+  <van-field
+    model:value="{{ shopName }}"
+    placeholder="请输入商家名称"
+    border="{{false}}"
+    clearable
+    center
+    use-button-slot
+  >
+  <van-button slot="button" bindtap="createShop" type="primary" size="small" plain hairline block>创建</van-button>
+  </van-field>
+</van-cell-group>
+<scroll-view scroll-y="true" style="width: 100%;height:{{scrollHeight}}px;" refresher-enabled="{{true}}" 	refresher-triggered="{{triggered}}" bindscrolltolower="bindscrolltolower" bindrefresherrefresh="bindrefresherrefresh">
+  <van-cell-group>
+    <van-cell wx:for="{{list}}" wx:key="_id" title="{{item.name}}" value="{{item.tel}}" label="{{item.address}}" border="{{ false }}" is-link link-type="navigateTo"
+  url="{{'/pages/admin/shop/create?id=' + item._id}}" />
+  </van-cell-group>
+</scroll-view>
+
+<admin-tabbar active="{{1}}" />
