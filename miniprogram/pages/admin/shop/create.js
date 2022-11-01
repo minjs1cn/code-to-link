@@ -23,9 +23,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    const id = options.id || options.query.id
+    const id = options.id
     this.data.id = id
     this.getById(id)
+  },
+
+  onOpenAdData() {
+    wx.navigateTo({
+      url: '../statistics/statistics?id=' + this.data.id,
+    })
   },
 
   async bindWifi(wifis) {

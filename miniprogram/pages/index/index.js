@@ -19,7 +19,7 @@ Page({
   },
 
   onLoad(options) {
-    const { id = '6f1c6d4163356611006638440ff965d5' } = options;
+    const { id = '9ca339b4635b4626004810581c69b066' } = options;
     this.getQrCode(id)
 
     // 在页面onLoad回调事件中创建激励视频广告实例

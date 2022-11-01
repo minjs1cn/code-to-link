@@ -1,0 +1,17 @@
+{
+  "name": "ad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.6",
+    "qs": "^6.11.0",
+    "request": "^2.88.2",
+    "wx-server-sdk": "~2.6.3"
+  }
+}

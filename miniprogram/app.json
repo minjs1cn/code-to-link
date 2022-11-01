@@ -1,12 +1,13 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/admin/qrCode/qrCode",
+    "pages/index/index",
     "pages/admin/shop/shop",
     "pages/admin/qrCode/bind",
     "pages/admin/statistics/statistics",
     "pages/admin/my/my",
-    "pages/admin/shop/create"
+    "pages/admin/shop/create",
+    "pages/shop/home/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -24,6 +25,8 @@
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-tabbar": "@vant/weapp/tabbar/index",
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",
-    "van-picker": "@vant/weapp/picker/index"
+    "van-picker": "@vant/weapp/picker/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
   }
 }

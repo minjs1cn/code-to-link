@@ -1,1 +1,8 @@
-<admin-tabbar active="{{2}}" />
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="底部广告">内容 1</van-tab>
+  <van-tab title="激励广告">
+    <view wx:for="{{list}}" wx:key="index">
+      <view>{{item.stat_item.req_succ_count}}</view>
+    </view>
+  </van-tab>
+</van-tabs>

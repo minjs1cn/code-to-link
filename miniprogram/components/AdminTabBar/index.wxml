@@ -1,6 +1,6 @@
 <van-tabbar id="admin-tabbar" active="{{index}}" bind:change="onTabChange">
   <van-tabbar-item icon="manager-o">二维码</van-tabbar-item>
   <van-tabbar-item icon="shop-o">商家</van-tabbar-item>
-  <van-tabbar-item icon="friends-o">统计</van-tabbar-item>
-  <van-tabbar-item icon="setting-o">我的</van-tabbar-item>
+  <!-- <van-tabbar-item icon="friends-o">统计</van-tabbar-item>
+  <van-tabbar-item icon="setting-o">我的</van-tabbar-item> -->
 </van-tabbar>

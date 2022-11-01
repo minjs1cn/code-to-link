@@ -43,6 +43,9 @@
     <van-button type="primary" block formType="submit">更新</van-button>
   </view>
 </form>
+<view class="btn">
+  <van-button type="primary" block bindtap="onOpenAdData">查看数据</van-button>
+</view>
 <form catchsubmit="formSubmitWifi" wx:if="{{info.wifis.length}}">
   <van-cell-group wx:for="{{info.wifis}}" wx:key="_id" title="WIFI设置">
     <van-field
